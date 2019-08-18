@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock %}</title>
+    
+    <!-- STYLES -->
+    <!-- Materialize CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+    <!-- Custom -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav-center transparent z-depth-0">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile">
+                <li><a class="black-text" href="{{ url_for('index') }}">Home</a></li>
+                <li><a class="black-text" href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                <li><a class="black-text" href="{{ url_for('about') }}">About</a></li>
+                <li><a class="black-text" href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- Materialize JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <!-- Materialize Object Initialization -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/initialize.js') }}"></script>
+</body>
+</html>
