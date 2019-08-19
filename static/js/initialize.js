@@ -6,6 +6,10 @@ $(document).ready(function(){
     $('.modal').modal();
     $('.dropdown-trigger').dropdown();
  });
+ 
+$(document).ready(function(){
+    $('#homepage').fadeIn(1000);
+});
 
 // $(function(){  // $(document).ready shorthand
 //     $('.monster').fadeIn('slow');

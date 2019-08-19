@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "AvenirLTStd-Light";
     src: url('../font/avenir-light/AvenirLTStd-Light.eot') 
@@ -55,8 +54,10 @@
     height:auto !important;
  }
 
-.homepage {
-    background-image: url("../img/homepage.jpg");
+#homepage {
+    display: none;
+    background-image: url("../img/home/cover.jpg");
+    /* background-image:linear-gradient(#fff, #000); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
