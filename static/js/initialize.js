@@ -12,6 +12,17 @@ $(document).ready(function(){
     $("#homepage").fadeIn(1100);
 });
 
+var $grid = $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+});
+
+$grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
+});
+
 // $(function(){  // $(document).ready shorthand
 //     $(".monster").fadeIn("slow");
 // });

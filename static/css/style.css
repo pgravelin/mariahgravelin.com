@@ -67,18 +67,16 @@
 }
 
 #about {
-    background-image: linear-gradient(grey, white);
+    background-color: #999997;
     height: 100vh;
     width: 100%;
 }
 
 .portfolio {
-    background-image: linear-gradient(grey, white);
+    background-color: #999997;
     height: 100vh;
     width: 100%;
 }
-
-
 
 .md-dark { color: rgba(0, 0, 0, 0.54); }
 
@@ -111,3 +109,38 @@ html, body, .my-wrapper {
 .hideme {
     opacity:0;
 }
+
+.grid {
+    background: #EEE;
+    margin-top: 2%;
+    margin-left: 10%;
+    max-width: 80%;
+}
+  
+/* clearfix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 50%;
+}
+
+.grid-item {
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 10px;
+}
+
+.grid-item--width2 { width:  40%; }
+.grid-item--width3 { width:  60%; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
