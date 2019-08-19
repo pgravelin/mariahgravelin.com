@@ -18,9 +18,21 @@ mail.init_app(app)
 def index():
     return render_template("index.html")
 
-@app.route("/portfolio")
-def portfolio():
-    return render_template("portfolio.html")
+@app.route("/audition")
+def audition():
+    return render_template("audition.html")
+
+@app.route("/dance")
+def dance():
+    return render_template("dance.html")
+
+@app.route("/interior_design")
+def interior_design():
+    return render_template("interior_design.html")
+
+@app.route("/portraits")
+def portraits():
+    return render_template("portraits.html")
 
 @app.route("/about")
 def about():

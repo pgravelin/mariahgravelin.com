@@ -50,6 +50,11 @@
     color: grey;
 }
 
+.dropdown-content{
+    width: max-content !important;
+    height:auto !important;
+ }
+
 .homepage {
     background-image: url("../img/homepage.jpg");
     background-repeat: no-repeat;
@@ -86,4 +91,8 @@ html, body, .my-wrapper {
 .header {
     color: black;
     font-weight: 300;
+}
+
+.hideme {
+    opacity:0;
 }

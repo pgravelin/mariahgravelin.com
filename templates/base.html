@@ -25,14 +25,28 @@
             <div class="nav-center">
                 <ul class="hide-on-med-and-down">
                     <li><a class="nav-text" href="{{ url_for('index') }}">H O M E</a></li>
-                    <li><a class="nav-text" href="{{ url_for('portfolio') }}">P O R T F O L I O</a></li>
+                    <li><a class="nav-text dropdown-trigger" href="#" 
+                        data-target="portfolioDropdown">P O R T F O L I O</a></li>
+                    <ul id="portfolioDropdown" class="dropdown-content">
+                        <li><a href="{{ url_for('audition') }}">Audition</a></li>
+                        <li><a href="{{ url_for('dance') }}">Dance</a></li>
+                        <li><a href="{{ url_for('interior_design') }}">Interior Design</a></li>
+                        <li><a href="{{ url_for('portraits') }}">Portraits</a></li>
+                    </ul>
                     <li><a class="nav-text" href="{{ url_for('about') }}">A B O U T</a></li>
                     <li><a class="nav-text" href="{{ url_for('contact') }}">C O N T A C T</a></li>
                 </ul>
             </div>
             <ul id="nav-mobile" class="sidenav">
                 <li><a class="nav-text" href="{{ url_for('index') }}">H O M E</a></li>
-                <li><a class="nav-text" href="{{ url_for('portfolio') }}">P O R T F O L I O</a></li>
+                <li><a class="nav-text dropdown-trigger" href="#" 
+                    data-target="portfolioDropdown2">P O R T F O L I O</a></li>
+                <ul id="portfolioDropdown2" class="dropdown-content">
+                    <li><a href="{{ url_for('audition') }}">Audition</a></li>
+                    <li><a href="{{ url_for('dance') }}">Dance</a></li>
+                    <li><a href="{{ url_for('interior_design') }}">Interior Design</a></li>
+                    <li><a href="{{ url_for('portraits') }}">Portraits</a></li>
+                </ul>
                 <li><a class="nav-text" href="{{ url_for('about') }}">A B O U T</a></li>
                 <li><a class="nav-text" href="{{ url_for('contact') }}">C O N T A C T</a></li>
             </ul>
