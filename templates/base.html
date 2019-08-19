@@ -7,30 +7,51 @@
     <title>{% block title %} {% endblock %}</title>
     
     <!-- STYLES -->
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|
+        Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <!-- Materialize CSS -->
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.css') }}" media="screen,projection">
+    <!-- Animate CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" media="screen,projection">
     <!-- Custom -->
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen,projection">
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav class="nav-center transparent z-depth-0">
+    <nav class="white black z-depth-0">
         <div class="nav-wrapper">
-            <ul id="nav-mobile">
+            <div class="nav-center">
+                <ul class="hide-on-med-and-down">
+                    <li><a class="nav-text" href="{{ url_for('index') }}">H O M E</a></li>
+                    <li><a class="nav-text" href="{{ url_for('portfolio') }}">P O R T F O L I O</a></li>
+                    <li><a class="nav-text" href="{{ url_for('about') }}">A B O U T</a></li>
+                    <li><a class="nav-text" href="{{ url_for('contact') }}">C O N T A C T</a></li>
+                </ul>
+            </div>
+            <ul id="nav-mobile" class="sidenav">
                 <li><a class="nav-text" href="{{ url_for('index') }}">H O M E</a></li>
                 <li><a class="nav-text" href="{{ url_for('portfolio') }}">P O R T F O L I O</a></li>
                 <li><a class="nav-text" href="{{ url_for('about') }}">A B O U T</a></li>
                 <li><a class="nav-text" href="{{ url_for('contact') }}">C O N T A C T</a></li>
             </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons md-dark">menu</i></a>
         </div>
     </nav>
 
-    <div class="wrap">
-        {% block content %} {% endblock %}
-    </div>
+    {% block content %} {% endblock %}
+
+    <!-- FOOTER -->
+    <footer class="page-footer black center">
+        <div class="container">
+            © 2019 by Mariah Gravelin
+        </div>  
+    </footer>
 
     <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <!-- Materialize JS -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
     <!-- Materialize Object Initialization -->

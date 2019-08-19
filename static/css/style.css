@@ -15,7 +15,6 @@
     font-style: normal;
 }  
 
-
 @font-face {
     font-family: "FuturaBT-Light";
     src: url('../font/futura/FuturaBT-Light.eot') 
@@ -32,16 +31,16 @@
     font-style: normal;
 }  
 
-nav.nav-center ul {
+.nav-center ul {
     text-align: center; 
 }
 
-nav.nav-center ul li {
+.nav-center ul li {
     display: inline;
     float: none;
 }
 
-nav.nav-center ul li a {
+.nav-center ul li a {
     display: inline-block;
     font-size: 15px;
     font-family: "AvenirLTStd-Light";
@@ -49,4 +48,30 @@ nav.nav-center ul li a {
 
 .nav-text{
     color: grey;
+}
+
+.homepage {
+    background-image: url("../img/homepage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.md-dark { color: rgba(0, 0, 0, 0.54); }
+
+html, body, .my-wrapper {
+    height: 100%;
+}
+
+#splash {
+    margin-left: 60%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "FuturaBT-Light";
+    text-align: center;
+    color: white;
 }
