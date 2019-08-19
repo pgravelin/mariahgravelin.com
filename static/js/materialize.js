@@ -6561,7 +6561,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.dropdown = M.Dropdown.init(this.el, {
           autoFocus: false,
           closeOnClick: false,
-          coverTrigger: false,
+          coverTrigger: true,
           onItemClick: function (itemEl) {
             _this38.selectOption($(itemEl));
           }
