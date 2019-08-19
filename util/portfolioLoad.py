@@ -1,32 +1,40 @@
 import os
 
-auditionPhotos = None
-dancePhotos = None
-designPhotos = None
-portraitPhotos = None
+auditionFiles = list()
+danceFiles = list()
+designFiles = list()
+portraitFiles = list()
 
-mapper = {"audition": auditionPhotos, "dance": dancePhotos, "design": designPhotos, 
-            "portraits": portraitPhotos}
+auditionHTML = ""
+danceHTML = ""
+designHTML = ""
+portraitHTML = ""
 
-def load(pageName):
-    basedir = os.path.abspath(os.path.dirname(__file__))[:-4]
-    directory = basedir + "static/img/" + pageName
+mapper = {"audition": [auditionHTML, auditionFiles], "dance": [danceHTML, danceFiles], 
+          "design": [designHTML, designFiles], "portraits": [portraitHTML, portraitFiles]}
+
+def load(dir_list, pageName):
+    print("LOADING")
     paths = list()
 
-    for file in os.listdir(directory):
-        filename = os.fsdecode(file)
-        if filename.endswith(".jpg") or filename.endswith(".png"): 
-            paths.append(os.path.join("../img/", pageName, filename))
-            continue
-        else:
-            continue
+    for file in dir_list:
+        if file.endswith(".jpg") or file.endswith(".png"): 
+            paths.append(os.path.join("../img/", pageName, file))
         
     return paths
 
+def generateHTML(paths):
+    return "OK"
+
 def cachedLoad(pageName): 
-    photos = load(pageName) if mapper[pageName] == None else mapper[pageName]
+    basedir = os.path.abspath(os.path.dirname(__file__))[:-4]
+    directory = basedir + "static/img/" + pageName
+    dir_list = os.listdir(directory)
     
-    if mapper[pageName] == None:
-        mapper[pageName] = photos
-        
-    print(photos)
+    if mapper[pageName][1] != dir_list:
+        mapper[pageName][0] = generateHTML(load(dir_list, pageName))
+        mapper[pageName][1] = dir_list
+        return mapper[pageName][0]
+    else:
+        return mapper[pageName][0]
+    
