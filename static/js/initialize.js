@@ -15,7 +15,7 @@ $(document).ready(function(){
 //     $('.monster').fadeIn('slow');
 // });
   
-$(document).ready(function() {s
+$(document).ready(function() {
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
         /* Check the location of each desired element */
