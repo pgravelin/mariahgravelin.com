@@ -1,8 +1,18 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
+from flask_mail import Message, Mail
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = b'p\xe6s\x13\xf9*\xd3X?~\x8c\xd1\x0b+)\xc4\xe2\x82\xf7U,\x9bO1'
+mail = Mail(app)
+
+app.config["SECRET_KEY"] = b"p\xe6s\x13\xf9*\xd3X?~\x8c\xd1\x0b+)\xc4\xe2\x82\xf7U,\x9bO1"
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = "mgravphoto@gmail.com"
+app.config["MAIL_PASSWORD"] = "gawjjiyyjuzskwff"
+ 
+mail.init_app(app)
 
 @app.route("/")
 def index():
@@ -24,7 +34,17 @@ def contact():
         if not form.validate_on_submit():
             return render_template("contact.html", form=form)
         else:
-            return "Form posted."
+            msgBody= """
+            From: %s <%s>
+            %s
+            """ % (form.name.data, form.email.data, form.message.data)
+            msg = mail.send_message(
+                form.subject.data,
+                sender="mgravphoto@gmail.com",
+                recipients=['pygravelin@gmail.com'],
+                body=msgBody
+            )
+            return render_template('contact.html', success=True)
     
     if request.method == "GET":
         return render_template("contact.html", form=form)
