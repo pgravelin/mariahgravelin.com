@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
+from util.portfolioLoad import load
 from flask_mail import Message, Mail
 
 app = Flask(__name__)
@@ -20,6 +21,7 @@ def index():
 
 @app.route("/audition")
 def audition():
+    load("audition")
     return render_template("audition.html")
 
 @app.route("/dance")
