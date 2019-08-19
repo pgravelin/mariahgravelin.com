@@ -8,7 +8,7 @@ $(document).ready(function(){
  });
  
 $(document).ready(function(){
-    $('#homepage').fadeIn(1300);
+    $('#homepage').fadeIn(1100);
 });
 
 // $(function(){  // $(document).ready shorthand
