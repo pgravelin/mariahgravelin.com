@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = b'p\xe6s\x13\xf9*\xd3X?~\x8c\xd1\x0b+)\xc4\xe2\x82\xf7U,\x9bO1'
 
 @app.route("/")
 def index():

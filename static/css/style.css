@@ -75,3 +75,15 @@ html, body, .my-wrapper {
     text-align: center;
     color: white;
 }
+
+/* Message flashing */
+.flash {
+    background-color: #FBB0B0;
+    padding: 10px;
+    width: 400px;
+}
+
+.header {
+    color: black;
+    font-weight: 300;
+}
