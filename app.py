@@ -26,15 +26,18 @@ def audition():
 
 @app.route("/dance")
 def dance():
-    return render_template("dance.html")
+    photos = cachedLoad("dance")
+    return render_template("dance.html", photos=photos)
 
 @app.route("/interior_design")
 def interior_design():
-    return render_template("interior_design.html")
+    photos = cachedLoad("design")
+    return render_template("interior_design.html", photos=photos)
 
-@app.route("/portraits")
-def portraits():
-    return render_template("portraits.html")
+@app.route("/portrait")
+def portrait():
+    photos = cachedLoad("portrait")
+    return render_template("portrait.html", photos=photos)
 
 @app.route("/about")
 def about():

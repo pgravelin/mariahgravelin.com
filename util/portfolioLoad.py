@@ -1,5 +1,6 @@
 import os
 from flask import Markup
+from PIL import Image
 
 auditionFiles = list()
 danceFiles = list()
@@ -12,12 +13,14 @@ designHTML = ""
 portraitHTML = ""
 
 mapper = {"audition": [auditionHTML, auditionFiles], "dance": [danceHTML, danceFiles], 
-          "design": [designHTML, designFiles], "portraits": [portraitHTML, portraitFiles]}
+          "design": [designHTML, designFiles], "portrait": [portraitHTML, portraitFiles]}
 
 def generateHTML(files, pageName):
     html = list()
     for fileName in files:
-        pass
+        html.append("<div class=\"portfolio-item\">")
+        html.append("<img src=\"static/img/%s/%s\">" % (pageName, fileName))
+        html.append("</div>")
     return Markup("".join(html))
 
 def cachedLoad(pageName): 
