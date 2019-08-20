@@ -109,38 +109,3 @@ html, body, .my-wrapper {
 .hideme {
     opacity:0;
 }
-
-.grid {
-    background: red;
-    margin-top: 2%;
-    margin-left: 10%;
-    max-width: 80%;
-    min-height: 100%;
-}
-  
-/* clearfix */
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.grid-sizer,
-.grid-item {
-    width: 33%;
-}
-
-.grid-item {
-    float: left;
-    background: #D26;
-    /* border: 2px solid #333; */
-    border-color: hsla(0, 0%, 0%, 0.5);
-    /* border-radius: 10px; */
-    max-height: 2%;
-
-}
-
-img {
-    max-width: 100%;    
-    max-height: 100%
-}

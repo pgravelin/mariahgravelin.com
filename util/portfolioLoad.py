@@ -17,10 +17,7 @@ mapper = {"audition": [auditionHTML, auditionFiles], "dance": [danceHTML, danceF
 def generateHTML(files, pageName):
     html = list()
     for fileName in files:
-        html.append("<div class='grid-item'>")
-        html.append("<img src='../static/img/%s/%s')> " % \
-            (pageName, fileName))
-        html.append("</div>")
+        pass
     return Markup("".join(html))
 
 def cachedLoad(pageName): 
