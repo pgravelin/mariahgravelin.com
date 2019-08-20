@@ -8,7 +8,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $("#homepage").css("background-image")
+    $("#homepage").css("background-image");
     $("#homepage").fadeIn(1100);
 });
 

@@ -21,8 +21,8 @@ def index():
 
 @app.route("/audition")
 def audition():
-    cachedLoad("audition")
-    return render_template("audition.html")
+    photos = cachedLoad("audition")
+    return render_template("audition.html", photos=photos)
 
 @app.route("/dance")
 def dance():
