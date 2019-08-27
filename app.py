@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
-from util.portfolioLoad import cachedLoad
 from flask_mail import Message, Mail
 
 app = Flask(__name__)
@@ -21,22 +20,18 @@ def index():
 
 @app.route("/audition")
 def audition():
-    photos = cachedLoad("audition")
     return render_template("audition.html", photos=photos)
 
 @app.route("/dance")
 def dance():
-    photos = cachedLoad("dance")
     return render_template("dance.html", photos=photos)
 
 @app.route("/interior_design")
 def interior_design():
-    photos = cachedLoad("design")
     return render_template("interior_design.html", photos=photos)
 
 @app.route("/portrait")
 def portrait():
-    photos = cachedLoad("portrait")
     return render_template("portrait.html", photos=photos)
 
 @app.route("/about")
