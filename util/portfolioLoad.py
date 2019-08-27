@@ -19,6 +19,7 @@ def generateHTML(files, pageName):
     html = list()
     for fileName in files:
         html.append("<div class=\"portfolio-item\">")
+            # "data-src=\"static/img/%s/%s\">" % (pageName, fileName))
         html.append("<img src=\"static/img/%s/%s\">" % (pageName, fileName))
         html.append("</div>")
     return Markup("".join(html))
