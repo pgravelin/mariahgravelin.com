@@ -83,6 +83,7 @@
 
 html, body, .my-wrapper {
     height: 100%;
+    min-height: 100vh;
 }
 
 #splash {
@@ -111,76 +112,30 @@ html, body, .my-wrapper {
     opacity: 0;
 }
 
-#grid-audition {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-auto-rows: minmax(150px, auto);
-    grid-gap: 10px;
-    max-width: 65%;
+.grid {
+    max-width: 80%;
     margin: 50px auto 50px;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    "a b"
-    "c d"
-    "e f";
-    /* border: 1px solid; */
 }
 
-#grid-dance {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-auto-rows: minmax(150px, auto);
-    grid-gap: 10px;
-    max-width: 65%;
-    margin: 50px auto 50px;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    "a b"
-    "c d"
-    "e f";
-    /* border: 1px solid; */
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.photo1 {
-    grid-area: a;
-    padding: 0;
+.grid-item,
+.grid-sizer {
+    width: 50%;
 }
 
-.photo2 {
-    grid-area: b;
-    padding: 0;
-}
-
-.photo3 {
-    grid-area: c;
-    padding: 0;
-}
-
-.photo4 {
-    grid-area: d;
-    padding: 0;
-}
-
-.photo5 {
-    grid-area: e;
-    padding: 0;
-}
-
-.photo6 {
-    grid-area: f;
-    padding: 0;
-}
-
-.item { 
+.grid-item {
     display: none;
-    /* border: 1px solid; */
+    float: left;
+    padding: 5px; 
 }
 
-.item img {
-   /* display: none; */
+.grid-item img {
+    display: block;
     width: 100%;
-    height: 100%;
-    padding: 0;
 }

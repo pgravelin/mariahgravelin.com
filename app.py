@@ -20,19 +20,19 @@ def index():
 
 @app.route("/audition")
 def audition():
-    return render_template("audition.html", photos=photos)
+    return render_template("audition.html")
 
 @app.route("/dance")
 def dance():
-    return render_template("dance.html", photos=photos)
+    return render_template("dance.html")
 
 @app.route("/interior_design")
 def interior_design():
-    return render_template("interior_design.html", photos=photos)
+    return render_template("interior_design.html")
 
 @app.route("/portrait")
 def portrait():
-    return render_template("portrait.html", photos=photos)
+    return render_template("portrait.html")
 
 @app.route("/about")
 def about():

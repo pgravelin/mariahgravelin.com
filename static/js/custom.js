@@ -1,5 +1,5 @@
 $("#grid-audition").imagesLoaded(function() {
-   $(".item").each(function() {
+   $(".grid-item").each(function() {
         $(this).fadeIn(1100);
    });
 });
