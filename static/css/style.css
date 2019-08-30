@@ -154,6 +154,7 @@ html, body, .my-wrapper {
 
 textarea {
     resize: vertical;
+    margin: 1%;
 }
 
 #contact label {
