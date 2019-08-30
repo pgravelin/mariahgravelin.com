@@ -2,45 +2,46 @@
 {% block title %}Contact Me{% endblock %}
 {% block content %}
 
-<div class="container animated fadeIn">
-    <div class="row">
-        <div class="col s12">
-            
-            {% if success %}
-            <h2 class="header">Thank You!</h2>
-            <p>Any feedback is much appreciated!</p>
-            {% else %}
-                <h2 class="header">Contact Me</h2>
-                {% for message in form.email.errors %}
-                    <div class="flash">{{ message }}</div>
-                {% endfor %}
+<div id="contact">
+    <div class="container animated fadeIn">
+        <div class="row">
+            <div class="col s12">
+                {% if success %}
+                <h2 class="header">Thank You!</h2>
+                <p>Any feedback is much appreciated!</p>
+                {% else %}
+                    <h2 class="header">Contact Me</h2>
+                    {% for message in form.email.errors %}
+                        <div class="flash">{{ message }}</div>
+                    {% endfor %}
 
-                <form action="{{ url_for('contact') }}" method=post>
-                    {{ form.hidden_tag() }}
+                    <form action="{{ url_for('contact') }}" method=post>
+                        {{ form.hidden_tag() }}
+                        
+                        <i class="material-icons">account_circle</i>
+                        {{ form.name.label }}
+                        {{ form.name }}
                     
-                    <i class="material-icons">account_circle</i>
-                    {{ form.name.label }}
-                    {{ form.name }}
-                
-                    <i class="material-icons">email</i>
-                    {{ form.email.label }}
-                    {{ form.email }}
-                
-                    <i class="material-icons">subject</i>
-                    {{ form.subject.label }}
-                    {{ form.subject }}
-                
-                    <i class="material-icons">mode_edit</i>
-                    {{ form.message.label }}
-                    {{ form.message }}
+                        <i class="material-icons">email</i>
+                        {{ form.email.label }}
+                        {{ form.email }}
                     
-                    <div style="margin-top:15px;">
-                        <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </form>
-            {% endif %}
+                        <i class="material-icons">subject</i>
+                        {{ form.subject.label }}
+                        {{ form.subject }}
+                    
+                        <i class="material-icons">mode_edit</i>
+                        {{ form.message.label }}
+                        {{ form.message }}
+                        
+                        <div style="margin-top:15px;">
+                            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

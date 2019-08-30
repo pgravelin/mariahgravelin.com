@@ -85,6 +85,13 @@
     width: 100%;
 }
 
+#contact {
+    background-color: #999997;
+    color: white;
+    height: 100vh;
+    width: 100%;
+}
+
 .portfolio {
     background-color: #999997;
     height: 100vh;
@@ -126,6 +133,18 @@ html, body, .my-wrapper {
 .header {
     color: black;
     font-weight: 300;
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-radius: 7px;
+    margin: 2% auto 2%;
+    padding: 1%;
+}
+
+#contact label {
+    color: black;
 }
 
 /* Portfolio */
@@ -263,16 +282,25 @@ html, body, .my-wrapper {
     margin: 0 auto;
 }
 
-.column {
+@media only screen and (max-width: 912px){
+    .separation {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 50%);
+        margin: 0 auto;
+    }
+}
+
+.section {
     width: 100%;
 }
 
-.column h2 {
+.section h2 {
     font-family: Worksans-Light;
     text-align: center;
 }
 
-.column p {
+.section p {
     font-family: FuturaBT-Light;
     text-align: center;
 }
