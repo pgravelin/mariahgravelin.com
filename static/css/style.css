@@ -134,10 +134,15 @@ html, body, .my-wrapper {
     max-width: 60%;
 }
 
+.portrait .grid {
+    max-width: 70%;
+}
+
 @media only screen and (max-width: 815px) {
     .grid,
     .audition .grid,
-    .design .grid {
+    .design .grid,
+    .portrait .grid {
         max-width: 100%;
         margin: 2% auto 2%;
     }
@@ -153,6 +158,11 @@ html, body, .my-wrapper {
 .grid-item,
 .grid-sizer {
     width: 50%;
+}
+
+.portrait .grid-item,
+.portrait .grid-sizer {
+    width: 33.333%;
 }
 
 .grid-item {
