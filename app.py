@@ -18,23 +18,23 @@ mail.init_app(app)
 def index():
     return render_template("index.html")
 
-@app.route("/audition")
+@app.route("/portfolio/audition")
 def audition():
     return render_template("audition.html")
 
-@app.route("/dance")
+@app.route("/portfolio/dance")
 def dance():
     return render_template("dance.html")
 
-@app.route("/interior_design")
+@app.route("/portfolio/interior_design")
 def interior_design():
     return render_template("interior_design.html")
 
-@app.route("/portrait")
+@app.route("/portfolio/portrait")
 def portrait():
     return render_template("portrait.html")
 
-@app.route("/street")
+@app.route("/portfolio/street")
 def street():
     return render_template("street.html")
 
