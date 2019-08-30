@@ -178,7 +178,7 @@ html, body, .my-wrapper {
 .grid-item img {
     display: block;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .grid-item:hover {
