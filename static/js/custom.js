@@ -1,8 +1,3 @@
-$(document).ready(function() {
-   $("#homepage").css("background-image");
-   $("#homepage").fadeIn(1100);
-});
-
 $(".grid").imagesLoaded(function() {
    $(".grid-item").each(function() {
         $(this).fadeIn(1100);

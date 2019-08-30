@@ -61,22 +61,50 @@
     display: inline-block;
     font-size: 15px;
     font-family: "AvenirLTStd-Light";
+    color: white;
 }
 
 .nav-text{
+    margin-left: 20px;
+    margin-right: 20px;
     color: grey;
+}
+
+.nav-center .dropdown-content {
+    background-color: grey;
+    box-shadow: none;
+}
+
+nav {
+    z-index: 998 !important; 
+    box-shadow: none;
 }
 
 /* Views */
 #homepage {
-    display: none;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+}
+
+#splash,
+#home-cover,
+#about, 
+.portfolio {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 75px;
+}
+
+#home-cover {
     background-image: url("../img/home/cover.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: auto;
-    height: 100vh;
     width: 100%;
+    height: 100%;
 }
 
 #about {
@@ -198,7 +226,7 @@ html, body, .my-wrapper {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 999; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -210,7 +238,7 @@ html, body, .my-wrapper {
   
 /* Modal Content (Image) */
 .modal-content {
-    margin: 0 auto;
+    margin: 5% auto;
     display: block;
 }
 
@@ -288,6 +316,12 @@ html, body, .my-wrapper {
     margin: 0 auto;
     max-width: 100%;
     max-height: 100%;
+}
+
+#banner img:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 .section p {
