@@ -34,6 +34,10 @@ def interior_design():
 def portrait():
     return render_template("portrait.html")
 
+@app.route("/street")
+def street():
+    return render_template("street.html")
+
 @app.route("/about")
 def about():
     return render_template("about.html")

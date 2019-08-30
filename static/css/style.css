@@ -87,13 +87,25 @@ html, body, .my-wrapper {
 }
 
 #splash {
-    margin-left: 60%;
+    margin-left: 55%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     font-family: "FuturaBT-Light";
     text-align: center;
     color: white;
+}
+
+@media only screen and (max-width: 815px) {
+    #splash {
+        margin-left: 2%;
+        position: relative;
+        top: 60%;
+        transform: translateY(-50%);
+        font-family: "FuturaBT-Light";
+        text-align: center;
+        color: white;
+    }    
 }
 
 /* Message flashing */
@@ -114,7 +126,19 @@ html, body, .my-wrapper {
 
 .grid {
     max-width: 80%;
-    margin: 50px auto 50px;
+    margin: 2% auto 2%;
+}
+
+.audition .grid {
+    max-width: 60%;
+}
+
+@media only screen and (max-width: 815px) {
+    .grid,
+    .audition .grid {
+        max-width: 100%;
+        margin: 2% auto 2%;
+    }
 }
 
 /* clear fix */
