@@ -14,8 +14,4 @@ var $grid = $('.grid').imagesLoaded( function() {
         percentPosition: true,
         columnWidth: '.grid-sizer'
     });
-    
-    $(".grid-item").each(function() {
-        $(this).fadeIn(1100);
-   });
 });
