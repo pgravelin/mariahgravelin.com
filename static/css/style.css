@@ -132,6 +132,7 @@ html, body, .my-wrapper {
 
 .header {
     color: black;
+    text-align: center;
     font-weight: 300;
 }
 
@@ -144,6 +145,15 @@ html, body, .my-wrapper {
 .container {
     margin: 2% auto 2%;
     padding: 1%;
+}
+
+.container p {
+    text-align: center;
+    color: black;
+}
+
+textarea {
+    resize: vertical;
 }
 
 #contact label {
