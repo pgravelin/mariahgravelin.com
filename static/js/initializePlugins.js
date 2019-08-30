@@ -7,11 +7,6 @@ $(document).ready(function() {
     $(".dropdown-trigger").dropdown();
 });
 
-$(document).ready(function() {
-    $("#homepage").css("background-image");
-    $("#homepage").fadeIn(1100);
-});
-
 var $grid = $('.grid').imagesLoaded( function() {
     // init Masonry after all images have loaded
     $grid.masonry({
