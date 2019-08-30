@@ -1,6 +1,6 @@
 # Mariah-Gravelin-Photography
 
-Freelance web application for Mariah Gravelin's photography portfolio, developed by me in August 2019.
+Responsive web application for Mariah Gravelin's photography portfolio, developed by me in August 2019.
 
 Credits:
 - Flask
