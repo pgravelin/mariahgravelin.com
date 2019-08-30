@@ -4,7 +4,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(".modal").modal();
-    $(".dropdown-trigger").dropdown();
+    $(".dropdown-trigger").dropdown({
+        hover: true
+    });
 });
 
 var $grid = $('.grid').imagesLoaded( function() {

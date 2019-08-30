@@ -186,7 +186,6 @@ html, body, .my-wrapper {
 .grid-item img {
     display: block;
     width: 100%;
-    border-radius: 6px;
 }
 
 .grid-item:hover {
@@ -265,22 +264,37 @@ html, body, .my-wrapper {
 } 
 
 /* About page */
-.section {
+.separation {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: minmax(150px, auto);
+    width: 80%;
     margin: 0 auto;
-    width: 40%;
+    grid-gap: 5px;
+}
+
+.section {
+    margin: 2% auto 0;
+    height: auto;
+    width: auto;
     background-color: #999997;
 }
 
-.section h2 {
-    font-family: Worksans-Light;
-    text-align: center;
+.section #banner {
+    width: auto;
+    height: auto;
+    margin: 0 auto; 
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
 }
 
 .section p {
     font-family: FuturaBT-Light;
+    margin: 0;
     padding-bottom: 5%;
-    height: 100%;
-    width: 100%;
     text-align: left;
     color: white;
 }
@@ -302,4 +316,15 @@ html, body, .my-wrapper {
     width: 100%;
     height: 10px;
     border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 1370px){
+    .separation {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 100%);
+        width: 80%;
+        margin: 0 auto;
+        grid-gap: 5px;
+    }
 }
