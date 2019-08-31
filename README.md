@@ -8,4 +8,4 @@ Credits:
 - Animate.css
 - imagesLoaded
 - jQuery
-- Masonry.
+- Masonry
