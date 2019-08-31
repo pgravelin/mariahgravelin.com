@@ -83,6 +83,8 @@
 nav {
     z-index: 998 !important; 
     box-shadow: none;
+    position: fixed;
+    top: 0;
 }
 
 html {
