@@ -17,3 +17,15 @@ var $grid = $(".grid").imagesLoaded(function() {
         columnWidth: ".grid-sizer"
     });
 });
+
+$(window).resize(function () {
+    $grid.masonry("destroy");
+    $grid.removeData("masonry");
+    $grid = $(".grid").imagesLoaded(function() {
+        $grid.masonry({
+            itemSelector: ".grid-item",
+            percentPosition: true,
+            columnWidth: ".grid-sizer"
+        });    
+    });
+});
