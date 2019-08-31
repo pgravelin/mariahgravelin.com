@@ -114,6 +114,7 @@ html {
 
 #home-cover {
     display: block;
+    position: absolute;
     width: 100%;
     height: 100vh;
     padding: 0;
