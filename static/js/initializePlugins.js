@@ -5,7 +5,8 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".modal").modal();
     $(".dropdown-trigger").dropdown({
-        hover: true
+        hover: true,
+        autoTrigger: false
     });
 });
 
@@ -19,8 +20,6 @@ var $grid = $(".grid").imagesLoaded(function() {
 });
 
 $(window).resize(function () {
-    // $grid.masonry("destroy");
-    // $grid.removeData("masonry");
     $grid = $(".grid").imagesLoaded(function() {
         $grid.masonry({
             itemSelector: ".grid-item",
