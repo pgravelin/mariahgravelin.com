@@ -19,8 +19,6 @@ var $grid = $(".grid").imagesLoaded(function() {
 });
 
 $(window).resize(function () {
-    $grid.masonry("destroy");
-    $grid.removeData("masonry");
     $grid = $(".grid").imagesLoaded(function() {
         $grid.masonry({
             itemSelector: ".grid-item",
