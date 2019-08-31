@@ -112,7 +112,7 @@ html {
     padding-top: 75px;
 }
 
-#home-cover {
+#home-cover {   
     display: block;
     position: absolute;
     width: 100%;
@@ -187,6 +187,7 @@ html, body, .my-wrapper {
 .grid {
     max-width: 80%;
     margin: 2% auto 2%;
+    /* transition: 500ms; */
 }
 
 .is-invisible {

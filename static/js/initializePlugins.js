@@ -10,7 +10,7 @@ $(document).ready(function() {
 });
 
 var $grid = $(".grid").imagesLoaded(function() {
-    $grid.removeClass("is-invisible");
+    $grid.addClass("animated fadeIn");
     $grid.masonry({
         itemSelector: ".grid-item",
         percentPosition: true,
