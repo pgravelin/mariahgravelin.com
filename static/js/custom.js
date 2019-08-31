@@ -7,7 +7,7 @@ $(window).on("load", function() {
 var modal = $(".modal");
 var modalImg = $("#modal-img")
 
-$("img").each(function() {
+$(".grid img").each(function() {
    $(this).on("click", function() {
       modal.css("display", "block");
       modalImg.attr("src", $(this).attr("src"));
