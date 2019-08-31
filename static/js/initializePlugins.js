@@ -9,11 +9,11 @@ $(document).ready(function() {
     });
 });
 
-var $grid = $('.grid').imagesLoaded( function() {
-    // init Masonry after all images have loaded
+var $grid = $(".grid").imagesLoaded(function() {
+    $grid.removeClass("is-invisible");
     $grid.masonry({
-        itemSelector: '.grid-item',
+        itemSelector: ".grid-item",
         percentPosition: true,
-        columnWidth: '.grid-sizer'
+        columnWidth: ".grid-sizer"
     });
 });

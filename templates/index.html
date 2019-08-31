@@ -2,8 +2,10 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-<div id="homepage">
-    <div id="home-cover" class="animated fadeIn"></div>
+<div id="homepage" class="is-invisible">
+    <div id="home-cover">
+        <img src="{{ url_for('static', filename='img/home/cover.jpg') }}" alt="">
+    </div>
     <div id="splash">
         <p style="font-size: 40px; margin-bottom: 2px">MARIAH GRAVELIN</p>
         <p style="font-size: 20px; margin-top: 2px;">PHOTOGRAPHY</p>

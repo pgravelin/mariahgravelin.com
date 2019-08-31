@@ -1,6 +1,6 @@
-$(".grid").imagesLoaded(function() {
-   $(".grid-item").each(function() {
-        $(this).fadeIn(1100);
+$(window).on("load", function() {
+   var $cover = $("#homepage").imagesLoaded(function() {
+      $cover.removeClass("is-invisible");
    });
 });
 

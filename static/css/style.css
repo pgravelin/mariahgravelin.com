@@ -94,6 +94,11 @@ html {
     overflow: auto;
     height: 100vh;
     width: 100%;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
 }
 
 #splash,
@@ -108,10 +113,13 @@ html {
 }
 
 #home-cover {
-    background-image: url("../img/home/cover.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+#home-cover img {
     width: 100%;
     height: 100%;
 }
@@ -174,6 +182,15 @@ html, body, .my-wrapper {
 .grid {
     max-width: 80%;
     margin: 2% auto 2%;
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+}
+
+.is-invisible {
+    opacity: 0
 }
 
 .audition .grid,
@@ -212,7 +229,7 @@ html, body, .my-wrapper {
 }
 
 .grid-item {
-    display: none;
+    /* display: none; */
     float: left;
     padding: 5px; 
 }
@@ -374,3 +391,4 @@ html, body, .my-wrapper {
         color: white;
     }
 }
+
