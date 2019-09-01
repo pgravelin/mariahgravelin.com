@@ -4,6 +4,10 @@ $(window).on("load", function() {
    });
 });
 
+var $sep = $(".separation").imagesLoaded(function() {
+   $sep.addClass("animated fadeIn");
+});
+
 var modal = $(".modal");
 var modalImg = $("#modal-img")
 
