@@ -189,7 +189,6 @@ html, body, .my-wrapper {
 .grid {
     max-width: 80%;
     margin: 2% auto 5%;
-    /* transition: 500ms; */
 }
 
 .is-invisible {
