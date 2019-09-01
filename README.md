@@ -2,7 +2,9 @@
 
 Responsive web application for Mariah Gravelin's photography portfolio, developed by me in August 2019.
 
-I used Heroku for hosting and Cloudflare for the SSL certificate. You can visit the site [here](https://www.mariahgravelin.com)!
+I used Heroku for hosting, Cloudflare for nameservers/SSL, and Amazon S3 for cloud storage. 
+
+You can visit the site [here](https://www.mariahgravelin.com)!
 
 Credits:
 - Flask
