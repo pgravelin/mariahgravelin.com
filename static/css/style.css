@@ -231,7 +231,6 @@ html, body, .my-wrapper {
 }
 
 .grid-item {
-    /* display: none; */
     float: left;
     padding: 5px; 
 }
