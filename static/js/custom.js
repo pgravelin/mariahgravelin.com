@@ -14,6 +14,11 @@ $(".grid img").each(function() {
    });
 });
 
+$("#banner img").on("click", function() {
+   modal.css("display", "block");
+   modalImg.attr("src", $(this).attr("src"));
+});
+
 var span = $(".close");
 span.on("click", function() {
    modal.css("display", "none");
