@@ -1,10 +1,20 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
+from urlparse import urlparse, urlunparse
 import os
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
+
+@app.before_request
+def redirect_www():
+    """Redirect www requests to non-www."""
+    urlparts = urlparse(request.url)
+    if urlparts.netloc == 'www.mariahgravelin.heroku.com':
+        urlparts_list = list(urlparts)
+        urlparts_list[1] = 'www.mariahgravelin.com'
+        return redirect(urlunparse(urlparts_list), code=301)
 
 @app.route("/")
 def index():
