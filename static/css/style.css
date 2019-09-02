@@ -85,9 +85,10 @@ nav {
     box-shadow: none;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+}
+
+#sidenav {
+    transform: translate3d(0px,0px,0px);
 }
 
 html {
