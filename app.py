@@ -6,8 +6,8 @@ import os
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
-s3 = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "this_should_be_configured")
+s3 = S3Connection(os.environ["AWS_ACCESS_KEY_ID"], os.environ["AWS_SECRET_ACCESS_KEY"])
 
 @app.before_request
 def redirect_heroku():
