@@ -87,6 +87,10 @@ nav {
     top: 0;
 }
 
+#sidenav {
+    transform: translateZ(0); 
+}
+
 html {
     background-color: #999997;
 }
