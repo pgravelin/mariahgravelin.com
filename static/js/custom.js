@@ -23,11 +23,6 @@ $("#banner img").on("click", function() {
    modalImg.attr("src", $(this).attr("src"));
 });
 
-var span = $(".close");
-span.on("click", function() {
-   modal.hide();
-});
-
 $("body").click(function (e) {
    if(!$(e.target).is("img") && !$(e.target).closest(".modal-content").length && !$(e.target).is(".modal-content")) {
      $(".modal").hide();
