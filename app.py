@@ -1,11 +1,13 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms.forms import ContactForm
 from urllib.parse import urlparse, urlunparse
+from boto.s3.connection import S3Connection
 import os
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
+s3 = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
 
 @app.before_request
 def redirect_heroku():
