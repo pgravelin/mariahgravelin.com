@@ -25,5 +25,11 @@ $("#banner img").on("click", function() {
 
 var span = $(".close");
 span.on("click", function() {
-   modal.css("display", "none");
+   modal.hide();
+});
+
+$("body").click(function (e) {
+   if(!$(e.target).is("img") && !$(e.target).closest(".modal-content").length && !$(e.target).is(".modal-content")) {
+     $(".modal").hide();
+   }     
 });
