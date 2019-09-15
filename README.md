@@ -1,6 +1,6 @@
 # mariahgravelin.com
 
-Responsive web application for Mariah Gravelin's photography portfolio, developed by me in August 2019.
+Responsive web application for Mariah Gravelin's photography portfolio, developed in August 2019, according to client's requests.
 
 I used Heroku for hosting, Cloudflare for nameservers/SSL, and Amazon S3 for cloud storage. 
 
