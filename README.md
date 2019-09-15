@@ -1,4 +1,4 @@
-# Mariah-Gravelin-Photography
+# mariahgravelin.com
 
 Responsive web application for Mariah Gravelin's photography portfolio, developed by me in August 2019.
 
